@@ -1,0 +1,20 @@
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
+}
+@mixin desktop {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin smartphone {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}

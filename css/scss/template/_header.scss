@@ -1,0 +1,245 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: $white;
+  box-shadow: $box-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  .logo {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: $black;
+    font-weight: 800;
+  }
+  .navbar {
+    ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        padding: 0.2rem 0.8rem;
+        a {
+          text-decoration: none;
+          text-transform: capitalize;
+          color: $black;
+          font-weight: 600;
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+    }
+    a {
+      font-size: 1.6rem;
+    }
+  }
+  .icons div {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    &:hover {
+      color: $green;
+    }
+  }
+  .search-form {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    &.show {
+      display: flex;
+    }
+    &.hide {
+      display: none;
+    }
+    .fa-times {
+      position: absolute;
+      top: 5%;
+      right: 3%;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    input {
+      border: none;
+      outline: none;
+      width: 50%;
+      padding: 0.8rem;
+      background: none;
+      border-bottom: 0.2rem solid $black;
+      font-size: 1.8rem;
+      color: $white;
+    }
+    label.fa-search {
+      font-size: 2rem;
+    }
+  }
+  .shopping-cart {
+    width: 35%;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    background: $white;
+    height: 100vh;
+    padding: 2rem 1rem;
+    overflow-y: scroll;
+    padding: 5rem 1rem;
+    transform: translateX(100%);
+    h3.cart-title {
+      font-size: 1.8rem;
+      border-bottom: 1px solid $green;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    i.shopping-cart-close {
+      position: absolute;
+      top: 2%;
+      right: 5%;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+    .box {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: 0.5rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      .product-img img {
+        width: 8rem;
+        height: 8rem;
+        border: 1px solid $light-color;
+      }
+      .product-desc {
+        margin-right: auto;
+        .title {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: $black;
+          margin: 0rem 0.5rem;
+        }
+        span {
+          margin: 0rem 0.5rem;
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: $light-color;
+        }
+      }
+      i {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+    a.checkout-btn {
+      width: 100%;
+      background-color: $green;
+      color: $white;
+      text-align: center;
+      display: block;
+      padding: 1.5rem;
+      color: $black;
+      font-size: 1.5rem;
+      font-weight: 600;
+      &:hover {
+        background-color: $black;
+        color: $green;
+      }
+    }
+    h3.total {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin: 1rem 0;
+    }
+  }
+  .login-form {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    padding: 2rem;
+    background-color: #ddd;
+    transition: 0.3s ease-in-out;
+    &.active {
+      right: 5%;
+    }
+    h3 {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      margin: 0 0 1rem 0;
+    }
+    input {
+      width: 100%;
+      padding: 1rem 1rem;
+      display: block;
+      margin: 0.5rem 0;
+    }
+    .login-btn {
+      display: block;
+      margin: 1rem auto;
+      outline: none;
+      color: $white;
+      background-color: $green;
+    }
+    .remember {
+      #remember-me {
+        display: inline;
+        margin: 0.5rem 0;
+        width: auto;
+      }
+      label {
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        margin-left: 0.5rem;
+      }
+    }
+    p {
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      margin: 0.5rem 0;
+      a {
+        color: $green;
+        margin: 0rem 0.5rem;
+      }
+    }
+  }
+  @include desktop {
+    .navbar {
+      display: none;
+    }
+    .shopping-cart {
+      width: 40%;
+    }
+    #menu-btn {
+      display: inline-block;
+    }
+  }
+  @include tablet {
+    .shopping-cart {
+      width: 50%;
+    }
+  }
+  @include smartphone {
+    .shopping-cart {
+      width: 100%;
+    }
+  }
+}
+#menu-btn {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}

@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.img {
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 9%;
+}
+
+.header .logo {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: #222;
+  font-weight: 800;
+}
+
+.header .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .navbar ul li {
+  padding: 0.2rem 0.8rem;
+}
+
+.header .navbar ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #222;
+  font-weight: 600;
+}
+
+.header .navbar ul li a:hover {
+  color: #bac34e;
+}
+
+.header .navbar a {
+  font-size: 1.6rem;
+}
+
+.header .icons div {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.header .icons div:hover {
+  color: #bac34e;
+}
+
+.header .search-form {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.header .search-form.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .search-form.hide {
+  display: none;
+}
+
+.header .search-form .fa-times {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header .search-form input {
+  border: none;
+  outline: none;
+  width: 50%;
+  padding: 0.8rem;
+  background: none;
+  border-bottom: 0.2rem solid #222;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.header .search-form label.fa-search {
+  font-size: 2rem;
+}
+
+.header .shopping-cart {
+  width: 35%;
+  position: fixed;
+  top: 0%;
+  right: 0;
+  background: #fff;
+  height: 100vh;
+  padding: 2rem 1rem;
+  overflow-y: scroll;
+  padding: 5rem 1rem;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.header .shopping-cart h3.cart-title {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #bac34e;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.header .shopping-cart i.shopping-cart-close {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.header .shopping-cart .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.header .shopping-cart .box .product-img img {
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid #666;
+}
+
+.header .shopping-cart .box .product-desc {
+  margin-right: auto;
+}
+
+.header .shopping-cart .box .product-desc .title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #222;
+  margin: 0rem 0.5rem;
+}
+
+.header .shopping-cart .box .product-desc span {
+  margin: 0rem 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.header .shopping-cart .box i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.header .shopping-cart a.checkout-btn {
+  width: 100%;
+  background-color: #bac34e;
+  color: #fff;
+  text-align: center;
+  display: block;
+  padding: 1.5rem;
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header .shopping-cart a.checkout-btn:hover {
+  background-color: #222;
+  color: #bac34e;
+}
+
+.header .shopping-cart h3.total {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.header .login-form {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  padding: 2rem;
+  background-color: #ddd;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.header .login-form.active {
+  right: 5%;
+}
+
+.header .login-form h3 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 0 0 1rem 0;
+}
+
+.header .login-form input {
+  width: 100%;
+  padding: 1rem 1rem;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.header .login-form .login-btn {
+  display: block;
+  margin: 1rem auto;
+  outline: none;
+  color: #fff;
+  background-color: #bac34e;
+}
+
+.header .login-form .remember #remember-me {
+  display: inline;
+  margin: 0.5rem 0;
+  width: auto;
+}
+
+.header .login-form .remember label {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  margin-left: 0.5rem;
+}
+
+.header .login-form p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin: 0.5rem 0;
+}
+
+.header .login-form p a {
+  color: #bac34e;
+  margin: 0rem 0.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  .header .navbar {
+    display: none;
+  }
+  .header .shopping-cart {
+    width: 40%;
+  }
+  .header #menu-btn {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .shopping-cart {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header .shopping-cart {
+    width: 100%;
+  }
+}
+
+#menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */
