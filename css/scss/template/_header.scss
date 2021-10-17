@@ -30,7 +30,7 @@
           color: $black;
           font-weight: 600;
           &:hover {
-            color: $green;
+            color: $primary-color;
           }
         }
       }
@@ -44,7 +44,7 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
     &:hover {
-      color: $green;
+      color: $primary-color;
     }
   }
   .search-form {
@@ -86,7 +86,7 @@
     }
   }
   .shopping-cart {
-    width: 35%;
+    width: 30%;
     position: fixed;
     top: 0%;
     right: 0;
@@ -95,10 +95,11 @@
     padding: 2rem 1rem;
     overflow-y: scroll;
     padding: 5rem 1rem;
+    box-shadow: -8px 0px 22px 0px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
     h3.cart-title {
       font-size: 1.8rem;
-      border-bottom: 1px solid $green;
+      border-bottom: 1px solid $primary-color;
       margin-bottom: 1.5rem;
       padding-bottom: 1rem;
     }
@@ -144,7 +145,7 @@
     }
     a.checkout-btn {
       width: 100%;
-      background-color: $green;
+      background-color: $primary-color;
       color: $white;
       text-align: center;
       display: block;
@@ -154,7 +155,7 @@
       font-weight: 600;
       &:hover {
         background-color: $black;
-        color: $green;
+        color: $primary-color;
       }
     }
     h3.total {
@@ -191,7 +192,7 @@
       margin: 1rem auto;
       outline: none;
       color: $white;
-      background-color: $green;
+      background-color: $primary-color;
     }
     .remember {
       #remember-me {
@@ -210,14 +211,32 @@
       text-transform: capitalize;
       margin: 0.5rem 0;
       a {
-        color: $green;
+        color: $primary-color;
         margin: 0rem 0.5rem;
       }
     }
   }
   @include desktop {
     .navbar {
-      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 2rem 0;
+      background-color: $primary-color;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      ul {
+        flex-direction: column;
+        li {
+          padding: 1rem;
+          a {
+            color: $white;
+          }
+        }
+      }
     }
     .shopping-cart {
       width: 40%;
@@ -239,7 +258,4 @@
 }
 #menu-btn {
   display: none;
-  @include tablet {
-    display: block;
-  }
 }

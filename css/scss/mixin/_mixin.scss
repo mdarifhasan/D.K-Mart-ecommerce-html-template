@@ -3,6 +3,11 @@
   grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
   gap: 1.5rem;
 }
+@mixin flex($flex, $justify-content, $align-items) {
+  display: $flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
 @mixin desktop {
   @media screen and (max-width: 991px) {
     @content;

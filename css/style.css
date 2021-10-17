@@ -30,6 +30,10 @@ html {
   }
 }
 
+section {
+  padding: 3rem 9%;
+}
+
 .hide {
   display: none;
 }
@@ -95,7 +99,7 @@ html {
 }
 
 .header .navbar ul li a:hover {
-  color: #bac34e;
+  color: #e5264b;
 }
 
 .header .navbar a {
@@ -109,7 +113,7 @@ html {
 }
 
 .header .icons div:hover {
-  color: #bac34e;
+  color: #e5264b;
 }
 
 .header .search-form {
@@ -165,7 +169,7 @@ html {
 }
 
 .header .shopping-cart {
-  width: 35%;
+  width: 30%;
   position: fixed;
   top: 0%;
   right: 0;
@@ -174,13 +178,15 @@ html {
   padding: 2rem 1rem;
   overflow-y: scroll;
   padding: 5rem 1rem;
+  -webkit-box-shadow: -8px 0px 22px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: -8px 0px 22px 0px rgba(0, 0, 0, 0.1);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
 
 .header .shopping-cart h3.cart-title {
   font-size: 1.8rem;
-  border-bottom: 1px solid #bac34e;
+  border-bottom: 1px solid #e5264b;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
 }
@@ -239,7 +245,7 @@ html {
 
 .header .shopping-cart a.checkout-btn {
   width: 100%;
-  background-color: #bac34e;
+  background-color: #e5264b;
   color: #fff;
   text-align: center;
   display: block;
@@ -251,7 +257,7 @@ html {
 
 .header .shopping-cart a.checkout-btn:hover {
   background-color: #222;
-  color: #bac34e;
+  color: #e5264b;
 }
 
 .header .shopping-cart h3.total {
@@ -294,7 +300,7 @@ html {
   margin: 1rem auto;
   outline: none;
   color: #fff;
-  background-color: #bac34e;
+  background-color: #e5264b;
 }
 
 .header .login-form .remember #remember-me {
@@ -316,13 +322,36 @@ html {
 }
 
 .header .login-form p a {
-  color: #bac34e;
+  color: #e5264b;
   margin: 0rem 0.5rem;
 }
 
 @media screen and (max-width: 991px) {
   .header .navbar {
-    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #e5264b;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .navbar ul li {
+    padding: 1rem;
+  }
+  .header .navbar ul li a {
+    color: #fff;
   }
   .header .shopping-cart {
     width: 40%;
@@ -348,9 +377,105 @@ html {
   display: none;
 }
 
+.space {
+  height: 50vh;
+}
+
+#footer {
+  padding: 3rem 9%;
+  background-color: #f3f3f3;
+}
+
+#footer .box-container {
+  border-bottom: 1px solid #666;
+  padding-bottom: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+#footer .box-container .box h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+}
+
+#footer .box-container .box p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-bottom: 1.5rem;
+}
+
+#footer .box-container .box ul {
+  list-style: none;
+}
+
+#footer .box-container .box ul li {
+  padding: 0.5rem 0;
+}
+
+#footer .box-container .box ul li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+#footer .box-container .box ul li a:hover {
+  color: #e5264b;
+}
+
+#footer .box-container .box ul li a i {
+  margin-right: 0.8rem;
+}
+
+#footer .box-container .box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer .box-container .box form input[type="email"] {
+  width: 85%;
+  display: inline-block;
+  border: none;
+  outline: none;
+  padding: 0.7rem 0.5rem;
+  border: 1px solid #dddddd;
+}
+
+#footer .box-container .box form input[type="submit"] {
+  display: inline-block;
+  background-color: #e5264b;
+  padding: 0.7rem 1rem;
+  border-radius: 0 0.4rem 0.4rem 0;
+  cursor: pointer;
+}
+
+#footer .footer-bootom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem 0;
+}
+
+#footer .footer-bootom p {
+  font-size: 1.4rem;
+}
+
 @media screen and (max-width: 768px) {
-  #menu-btn {
-    display: block;
+  #footer .footer-bootom img {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

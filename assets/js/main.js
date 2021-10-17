@@ -1,12 +1,24 @@
-/**
- * Header Menu
- */
-const menuClose = document.querySelector('header .search-form .fa-times');
-const searchForm = document.querySelector('.search-form');
-const searchBtn = document.querySelector('#search-btn')
+// Header
 
-// Search form
-menuClose.addEventListener('click',()=>{
+/**
+ * Navbar
+ */
+
+const menuBtn = document.querySelector('#menu-btn');
+const headerNav = document.querySelector('.header .navbar');
+
+menuBtn.addEventListener('click',()=>{
+    headerNav.classList.toggle('active');
+});
+/**
+ * Search form
+ */
+
+const searchClose = document.querySelector('header .search-form .fa-times');
+const searchForm = document.querySelector('.search-form');
+const searchBtn = document.querySelector('#search-btn');
+
+searchClose.addEventListener('click',()=>{
     searchForm.classList.add('hide');
     searchForm.classList.remove('show');
     
