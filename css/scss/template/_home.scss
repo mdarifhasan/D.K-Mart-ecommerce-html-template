@@ -1,0 +1,98 @@
+.home {
+  background-image: url("/assets/image/home-bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  &::after {
+    top: 0;
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 5;
+  }
+  .slides {
+    position: relative;
+    .slide {
+      display: none;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+      &.active {
+        display: flex;
+      }
+      .content {
+        flex: 1 1 40rem;
+        animation: slideLeft 0.5s ease-in-out;
+        .subtitle {
+          font-size: 3rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          margin: -2rem 0;
+          color: $primary-color-light;
+        }
+        .title {
+          font-size: 6rem;
+          text-transform: uppercase;
+          color: $black;
+          margin: 2rem 0;
+        }
+      }
+      .img {
+        flex: 1 1 40rem;
+        img {
+          animation: scaleUp 0.5s ease-in-out;
+        }
+      }
+    }
+    .next,
+    .prev {
+      font-size: 2rem;
+      color: $white;
+      background-color: $primary-color;
+      padding: 0.8rem 1.5rem;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      &:hover {
+        background-color: $white;
+        color: $primary-color;
+      }
+    }
+    .next {
+      right: -8rem;
+    }
+    .prev {
+      left: -8rem;
+    }
+    @include tablet {
+      .next,
+      .prev {
+        top: 88%;
+        transform: translateY(0);
+      }
+      .prev {
+        left: auto;
+        right: 5rem;
+      }
+      .next {
+        right: 0rem;
+      }
+    }
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-15rem);
+    opacity: 0;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+  }
+}

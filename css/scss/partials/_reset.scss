@@ -13,11 +13,25 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   @include desktop {
-    font-size: 55%;
+    font-size: 55.5%;
   }
   @include tablet {
-    font-size: 45%;
+    font-size: 48.5%;
   }
+}
+body,
+p {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+input {
+  outline: none;
+  border: none;
 }
 section {
   padding: 3rem 9%;
@@ -28,6 +42,21 @@ section {
 .show {
   display: block;
 }
-.img {
+img {
   width: 100%;
+}
+.btn {
+  padding: 1.5rem 2.5rem;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  background-color: $primary-color;
+}
+.background {
+  background-image: url("../../../assets/image/ripped-paper-base.png");
+  background-size: cover;
+  position: relative;
+  background-color: $primary-color;
+  padding: 1rem;
 }

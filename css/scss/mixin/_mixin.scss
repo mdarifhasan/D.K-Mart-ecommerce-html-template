@@ -9,7 +9,7 @@
   align-items: $align-items;
 }
 @mixin desktop {
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 995px) {
     @content;
   }
 }

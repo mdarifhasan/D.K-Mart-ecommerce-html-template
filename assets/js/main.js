@@ -48,4 +48,32 @@ const loginBtn = document.querySelector('#login-btn');
 
 loginBtn.addEventListener('click',()=>{
    loginForm.classList.toggle('active')
-})
+});
+/**
+ * home Slider
+ */
+ const nextBtn = document.querySelector('.home .slides .next');
+ const prevBtn = document.querySelector('.home .slides .prev');
+ 
+ let slides = document.querySelectorAll('.home .slides .slide');
+ let index = 0;
+ function nextSlide() {
+     slides[index].classList.remove('active');
+     index = (index + 1) % slides.length;
+     slides[index].classList.add('active');
+ }
+ function prevSlide() {
+     slides[index].classList.remove('active');
+     index = (index - 1 + slides.length) % slides.length;
+     slides[index].classList.add('active');
+ 
+ }
+ nextBtn.addEventListener('click',()=>{
+     nextSlide();
+     console.log('next');
+    })
+    prevBtn.addEventListener('click',()=>{
+     console.log('prev');
+     prevSlide();
+ })
+ setInterval(nextSlide,5000)

@@ -1,0 +1,20 @@
+.cta-section {
+  background-color: $primary-color;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  h3 {
+    font-size: 3rem;
+    color: $white;
+    text-transform: capitalize;
+  }
+  a.btn {
+    background-color: $white;
+    color: $primary-color;
+    font-weight: 700;
+    &:hover {
+      background-color: $black;
+    }
+  }
+}

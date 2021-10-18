@@ -1,0 +1,42 @@
+.banner-section {
+  .banners {
+    @include grid(32rem);
+    .banner {
+      position: relative;
+      overflow: hidden;
+      .img {
+        height: 100%;
+        img {
+          height: 100%;
+        }
+        &:hover img {
+          transform: scale(1.2);
+        }
+      }
+      .content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5%;
+        h3 {
+          font-size: 2rem;
+          color: $black;
+          text-transform: capitalize;
+        }
+        a {
+          color: $white;
+          text-transform: capitalize;
+          font-size: 1.5rem;
+          background-color: $primary-color;
+          padding: 0.8rem 1.5rem;
+          margin: 1rem 0;
+          display: block;
+          &:hover {
+            color: $white;
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+}
