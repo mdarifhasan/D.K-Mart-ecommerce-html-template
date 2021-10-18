@@ -1,0 +1,67 @@
+.product {
+  transition: 0.2s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem 0;
+  &:hover {
+    border: 1px solid $primary-color;
+  }
+  .product-img {
+    width: 100%;
+    img {
+      height: 25rem;
+    }
+  }
+  .product-desc {
+    padding: 1rem 1.5rem;
+    .title {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $primary-color;
+      del {
+        text-decoration: line-through;
+        margin-right: 0.8rem;
+        opacity: 0.8;
+      }
+    }
+  }
+  .product-footer {
+    text-align: center;
+    background-color: $primary-color;
+    padding: 0.8rem 0;
+    a {
+      color: $primary-color;
+      font-size: 1.4rem;
+      margin: 0 0.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      line-height: 3.5rem;
+      display: inline-block;
+      border-radius: 50%;
+      transition: 0.5s;
+      background-color: $white;
+      &:hover {
+        background-color: $black;
+      }
+    }
+  }
+  p.sale {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: $primary-color;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    color: $white;
+    font-size: 1.4rem;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,22 @@
+.pagination {
+  .pagination-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      a {
+        color: $black;
+        font-size: 1.5rem;
+        border: 1px solid $primary-color;
+        padding: 0.8rem;
+        margin: 0.8rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        &:hover {
+          background-color: $primary-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}

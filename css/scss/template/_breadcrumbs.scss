@@ -1,0 +1,16 @@
+.breadcrumbs {
+  text-align: center;
+  padding: 8rem 0;
+  background-image: url("../../../assets/image/heading-bg.jpg");
+  h2 {
+    display: inline-block;
+    a {
+      color: $primary-color;
+      font-size: 2.2rem;
+      text-transform: capitalize;
+    }
+  }
+  span {
+    font-size: 1.8rem;
+  }
+}
