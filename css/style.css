@@ -71,6 +71,7 @@ img {
   letter-spacing: 1px;
   font-size: 1.3rem;
   background-color: #e5264b;
+  cursor: pointer;
 }
 
 .background {
@@ -92,6 +93,10 @@ img {
   text-align: center;
   font-size: 3.5rem;
   text-transform: uppercase;
+}
+
+.screen-reader-text {
+  display: none;
 }
 
 .header {
@@ -650,6 +655,99 @@ img {
   background-color: #222;
 }
 
+.shop-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 4rem 9%;
+}
+
+.shop-products .shop-sidebar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 3rem;
+          flex: 1 1 3rem;
+}
+
+.shop-products .shop-sidebar .woo-sidebar-widget .title {
+  font-size: 2.5rem;
+  color: #222;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+}
+
+.shop-products .shop-sidebar .woo-sidebar-widget .title::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 0.2rem;
+  background-color: #e5264b;
+}
+
+.shop-products .shop-sidebar .woo-sidebar-widget ul li {
+  padding: 0.5rem 0;
+}
+
+.shop-products .shop-sidebar .woo-sidebar-widget ul li a {
+  font-size: 1.3rem;
+  color: #222;
+  text-transform: capitalize;
+}
+
+.shop-products .shop-sidebar .woo-sidebar-widget ul input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.8rem;
+}
+
+.shop-products .shop-sidebar .woo-sidebar-widget ul label {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+.shop-products .shop-sidebar button.filter-btn {
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
+.shop-products .shop-sidebar button.filter-btn:hover {
+  background-color: #222;
+  color: #e5264b;
+}
+
+.shop-products .product-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 60rem;
+          flex: 1 1 60rem;
+}
+
+.shop-products .product-container .products {
+  padding-top: 0;
+}
+
+.shop-products .product-container .load-more {
+  display: block;
+  margin: 3rem auto;
+  font-weight: 600;
+}
+
+.shop-products .product-container .load-more:hover {
+  background-color: #222;
+  color: #e5264b;
+}
+
 .featured-products {
   padding: 4rem 9%;
 }
@@ -683,7 +781,7 @@ img {
 }
 
 .products .product .product-img img {
-  height: 25rem;
+  height: 22rem;
 }
 
 .products .product .product-desc {

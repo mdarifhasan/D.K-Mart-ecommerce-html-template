@@ -52,6 +52,7 @@ img {
   letter-spacing: 1px;
   font-size: 1.3rem;
   background-color: $primary-color;
+  cursor: pointer;
 }
 .background {
   background-image: url("../../../assets/image/ripped-paper-base.png");
@@ -70,4 +71,7 @@ img {
   text-align: center;
   font-size: 3.5rem;
   text-transform: uppercase;
+}
+.screen-reader-text {
+  display: none;
 }
